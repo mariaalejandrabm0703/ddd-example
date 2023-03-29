@@ -1,14 +1,14 @@
 package domain
 
-import (
-	"ddd-example/repository"
-)
-
 type Padre struct {
-	hijo *repository.Hijo
+	hijo Hijo
 }
 
-func NewPadre(hijo *repository.Hijo) *Padre {
+type Hijo interface {
+	DameEdad() int
+}
+
+func NewPadre(hijo Hijo) *Padre {
 	return &Padre{
 		hijo: hijo,
 	}

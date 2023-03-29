@@ -1,5 +1,7 @@
 package repository
 
+import "fmt"
+
 type Hijo struct {
 	edad int
 }
@@ -11,5 +13,6 @@ func NewHijo(edad int) *Hijo {
 }
 
 func (h *Hijo) DameEdad() int {
+	fmt.Println("retornando edad hijo")
 	return h.edad
 }

@@ -17,3 +17,7 @@ func NewPadre(hijo Hijo) *Padre {
 func (p *Padre) DameEdadHijo() int {
 	return p.hijo.DameEdad()
 }
+
+type Service interface {
+	DameEdadHijo() int
+}

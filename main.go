@@ -1,17 +1,12 @@
 package main
 
-import "fmt"
-
-type Hijo struct {
-	edad int
-}
-
-func (h *Hijo) DameEdad() int {
-	return h.edad
-}
+import (
+	son "ddd-example/repository/repository"
+	"fmt"
+)
 
 type Padre struct {
-	hijo Hijo
+	hijo son.Hijo
 }
 
 func (p *Padre) DameEdadHijo() int {
@@ -19,7 +14,7 @@ func (p *Padre) DameEdadHijo() int {
 }
 
 func main() {
-	h := Hijo{edad: 4}
+	h := son.Hijo{edad: 4}
 	fmt.Println("la edad de hijo es ", h.DameEdad())
 
 	padre := Padre{hijo: h}
